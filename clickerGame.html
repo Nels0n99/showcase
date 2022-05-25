@@ -23,7 +23,7 @@
         <p>Score: 0</p>
         <button id="clickButton">Click Me!</button>
         <button id="reset">Restart</button>
-        <button class="hidden" id="double">Double Score: 50 score</button>
+        <button class="hidden" id="double">Double Score: 100 score</button>
     </div>
 </div>
 
@@ -61,7 +61,7 @@
     }
 
     function setDoubleScore() {
-        if (startScore < 25) {
+        if (startScore < 50) {
             doubleScore.classList.add("hidden")
         } else {
             picture.src = "https://external-preview.redd.it/E_04UTh-H9wugaMN808YS8WKb-f-yYPZ94Wsuf5fdOA.jpg?auto=webp&s=2054623dfa2d3f9d76160266d37e62f7f100aa61";
@@ -70,11 +70,11 @@
     }
 
     function clickDoubleScore() {
-        if (startScore < 50) {
+        if (startScore < 100) {
             let counter = score;
             counter.innerHTML = `Score: ${startScore}`;
-        } else if (startScore >= 50) {
-            startScore = startScore - 50;
+        } else if (startScore >= 100) {
+            startScore = startScore - 100;
             let counter = score;
             counter.innerHTML = `Score : ${startScore}`;
             pressButton.addEventListener('click', function (e) {
